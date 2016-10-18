@@ -23,7 +23,7 @@ window.onload=function(){
 	chrome.storage.sync.set({productId:document.getElementById('productId').value});    
 	chrome.storage.sync.set({killTime:document.getElementById('killTime').value});  
     chrome.storage.sync.set({timeInterval:document.getElementById('timeInterval').value});    
-    chrome.storage.sync.set({emailAddress:document.getElementById('songNoti').value});
+    chrome.storage.sync.set({songNoti:document.getElementById('songNoti').value});
     chrome.extension.sendMessage({message:'btStart_click'});
     
   };
