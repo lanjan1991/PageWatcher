@@ -10,7 +10,8 @@ var timer=null;
 
 var productId=''; //准备抢购产品
 var productName=''; //产品名
-var a_url='https://www.jintouwangdai.com/kisp/';
+//var a_url='https://www.jintouwangdai.com/kisp/';
+var a_url="https://www.jintouwangdai.com/kisp/auth/bondConfirm.html";
 var killTime='';
 
 var timeInterval=600;//刷新的时间间隔
@@ -29,7 +30,7 @@ chrome.storage.sync.get('productId',function(data){
   $(".title a").each(function(){
 	//console.log($(this).text());
 	if($(this).text().indexOf(productId) >= 0 ){
-		a_url += $(this).attr("href");
+		a_url += $(this).attr("href").substring(15);
 		console.log("a_url:" + a_url);
 		productName = $(this).text();
 		$(this).css("color", "blue");		
